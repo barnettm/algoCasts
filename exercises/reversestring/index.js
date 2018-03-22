@@ -26,10 +26,12 @@
 
 
 function reverse(str) {
+    debugger
     return str.split('').reduce((reversed, character) => {
         return character + reversed
     }, '');
 }
+
 
 
 // const reverse = (str) => str.split('').reverse().join('')
