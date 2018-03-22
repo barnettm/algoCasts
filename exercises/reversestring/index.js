@@ -16,12 +16,19 @@
 //      return str.split('').reverse().join('')
 // }
 
+// function reverse(str) {
+//     let reverse = '';
+//     for(let character of str) {
+//         reverse = character + reverse
+//     }
+//     return reverse;
+// }
+
+
 function reverse(str) {
-    let reverse = '';
-    for(let character of str) {
-        reverse = character + reverse
-    }
-    return reverse;
+    return str.split('').reduce((reversed, character) => {
+        return character + reversed
+    }, '');
 }
 
 
