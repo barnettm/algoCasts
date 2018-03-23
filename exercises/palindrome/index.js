@@ -10,7 +10,15 @@
 function palindrome(str) {
     const reverse = str.split('').reverse().join('')
     // return reverse === str ? true : false
-    return str === reversed
+    return str === reverse
+
 }
+
+
+// function palindrome(str) {
+//     return str.split('').every((char, i) => {
+//         return char === str[str.length -i - 1]
+//     })
+// }
 
 module.exports = palindrome;
