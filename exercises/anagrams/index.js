@@ -35,14 +35,14 @@
 
 
 function anagrams(stringA, stringB) {
-    const arrayA = stringA.replace(/[^\w]/g, '').toLowerCase().split('').sort((a,b) => {
+    const newStringA = stringA.replace(/[^\w]/g, '').toLowerCase().split('').sort((a,b) => {
       return a > b;
         }).join('')
-    const arrayB = stringB.replace(/[^\w]/g, '').toLowerCase().split('').sort((a,b) => {
+    const newStringB = stringB.replace(/[^\w]/g, '').toLowerCase().split('').sort((a,b) => {
       return a > b;
         }).join('')
     
-        return arrayA === arrayB ? true : false
+        return newStringA === newStringB ? true : false
   }
 
 
