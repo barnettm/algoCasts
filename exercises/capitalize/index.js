@@ -7,18 +7,27 @@
 //   capitalize('a lazy fox') --> 'A Lazy Fox'
 //   capitalize('look, it is working!') --> 'Look, It Is Working!'
 
-function capitalize(str) {
-    let stringArray = str.split('')
-    let returnString = ''
-    for(let i = 0; i<str.length; i++){
-        if(str[i-1] === ' ' || str[i-1] === undefined){
-            let uppercase = str[i].toUpperCase()
-            returnString += uppercase
-        }else{
-            returnString += str[i]
-        }
+// function capitalize(str) {
+//     let stringArray = str.split('')
+//     let returnString = ''
+//     for(let i = 0; i<str.length; i++){
+//         if(str[i-1] === ' ' || str[i-1] === undefined){
+//             let uppercase = str[i].toUpperCase()
+//             returnString += uppercase
+//         }else{
+//             returnString += str[i]
+//         }
+//     }
+//     return returnString
+// }
+
+function capitalize(str){
+    let words = [];
+    for(let word of str.split(' ')){
+        words.push(word[0].toUpperCase() + word.slice(1))
     }
-    return returnString
+    return words.join(' ')
+    
 }
 
 // console.log(capitalize('a short sentance'))
